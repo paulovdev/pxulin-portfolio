@@ -35,7 +35,7 @@
 <br>
 
 # How to use
-<ol><li>Install the libs and go to server.cjs file.</li><li>configure the twilio w/your "sid" and "token" & numbers.</li><li>run npm start</li></ol>
+<ol><li>Install the libs and go to server.cjs file.</li><li>configure the twilio w/your "sid", "token" & numbers.</li><li>run npm start</li></ol>
 	
 	
 # Deploy
