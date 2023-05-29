@@ -29,7 +29,7 @@ function Contact() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    {/** e.preventDefault(); **/}
 
     fetch('http://localhost:5000/submit-form', {
       method: 'POST',
