@@ -21,7 +21,7 @@
 
 </ul>
 
-<br>
+
 
 # Technologies
 <ul>
@@ -32,14 +32,18 @@
     <li>Node.JS<br></li>
 	   <li>API Fetch for Form<br></li>
 </ul>
-  
-# Deploy
-npm start
 <br>
-or
-<br>
-https://pxulin-portfolio.netlify.app/ to see only front-end
 
+# How to use
+<ol><li>Install the libs and go to server.cjs file.</li><li>configure the twilio w/your "sid" and "token" & numbers.</li><li>run npm start</li></ol>
+	
+	
+# Deploy
+
+
+
+
+https://pxulin-portfolio.netlify.app/ to see only front-end
 # Socials
 <a href="https://www.instagram.com/__pxulin/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.linkedin.com/in/pxulin/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
