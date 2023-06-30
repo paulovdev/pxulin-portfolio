@@ -142,7 +142,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0 10%;
+  padding: 0 100px;
   z-index: 999;
 }
 
@@ -186,10 +186,6 @@ ul.desk-menu {
 }
 
 @media (max-width: 992px) {
-  header {
-    padding: 0 5%;
-  }
-
   ul.desk-menu {
     display: none;
   }
@@ -520,6 +516,12 @@ span {
   padding: 1rem;
 }
 
+.card-right>p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
 
 /* PADDING-0 */
 @media (max-width: 992px) {
@@ -528,7 +530,8 @@ span {
   #about,
   #contact,
   #setup,
-  #skills {
+  #skills,
+  header {
     padding: 0 10px;
   }
 }
