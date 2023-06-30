@@ -52,10 +52,7 @@ const Setup = () => {
                                     ))
                                     )}
                             </div>
-
                         </div>
-
-
 
                         <div className="card-right">
                             <p>{selectedItem ? selectedItem.spec : "Selecione um item ao lado"}</p>

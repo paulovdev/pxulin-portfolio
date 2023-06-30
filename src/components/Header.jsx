@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sling as Hamburger } from 'hamburger-react';
+import { Cross as Hamburger } from 'hamburger-react'
 
 const Header = () => {
     const [isOpen, setOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <Hamburger toggled={isOpen} toggle={setOpen} />
+                <Hamburger direction='right' duration={0.1} easing="ease-in" toggled={isOpen} toggle={setOpen} />
                 <ul className={isOpen ? 'mobile-menu' : 'desk-menu'}>
                     {navigation.map((item, index) => (
                         <li key={index} onClick={handleClick}><Link to={item.href}> {item.nav}</Link></li>
