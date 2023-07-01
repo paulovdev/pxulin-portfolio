@@ -23,7 +23,15 @@ const Header = () => {
 
     function toggleTheme() {
         setIsDarkMode(!isDarkMode);
+        document.documentElement.classList.toggle('dark');
+        document.documentElement.classList.toggle('light');
     }
+
+    const translateAnimation = {
+        initial: { opacity: 0.1, y: -50 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 50 },
+    };
 
     return (
         <header>
@@ -36,14 +44,12 @@ const Header = () => {
                     toggle={setOpen}
                 />
                 <ul className={isOpen ? "mobile-menu" : "desk-menu"}>
-                    {navigation.map((item, index) => (
+                    {navigation.map((item, i) => (
                         <motion.li
-                            key={index}
+                            {...translateAnimation}
+                            transition={{ delay: i * 0.1 }}
+                            key={i}
                             onClick={handleClick}
-                            initial={{ opacity: 0, y: -50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ delay: index * 0.1 }}
                         >
                             <Link
                                 to={item.href}
@@ -57,11 +63,17 @@ const Header = () => {
                         </motion.li>
                     ))}
                 </ul>
-                <div className="logp" onClick={toggleTheme}>
+
+                <motion.div
+                    {...translateAnimation}
+                    transition={{ delay: 0.5 }}
+                    className="logo"
+                    onClick={toggleTheme}
+                >
                     <span className="theme-icon">
-                        {isDarkMode ? <FiSun size={30} /> : <FiMoon size={30} />}
+                        {isDarkMode ? <FiSun size={25} /> : <FiMoon size={25} />}
                     </span>
-                </div>
+                </motion.div>
             </nav>
         </header>
     );

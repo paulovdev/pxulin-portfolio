@@ -48,7 +48,6 @@
   }
 
   .image-container {
-    order: -1;
     margin-bottom: 2rem;
   }
 
@@ -130,106 +129,6 @@ textarea {
   }
 }
 
-/* SETUP */
-
-#setup {
-  padding: 0px 50px;
-  width: 100%;
-  flex-direction: column;
-}
-
-.styled-setup {
-  display: flex;
-  gap: 1rem;
-  color: var(--text-color);
-}
-
-@media (max-width: 992px) {
-  .styled-setup {
-    margin-block: 1rem;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-.card-left {
-  background: var(--bg);
-  border-radius: 0.5rem;
-  border: 1px solid var(--border);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  overflow-y: scroll;
-  padding: 1rem;
-
-  @media(max-width:992px) {
-    order: 1;
-  }
-}
-
-.item-list {
-  width: 100%;
-  width: 100%;
-  height: 300px;
-}
-
-input {
-  width: 100%;
-  padding: 0.7rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 0.3rem;
-  font-size: 1.1rem;
-  color: var(--text-color);
-  resize: none;
-  outline: none;
-}
-
-#item {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-  cursor: pointer;
-
-}
-
-#item>svg,
-span {
-  transition: all 0.5s;
-}
-
-#item:hover svg {
-  transform: translateX(8px);
-  color: var(--color-special);
-}
-
-#item:hover span {
-  color: var(--color-special);
-}
-
-
-.card-right {
-  background: var(--bg);
-  border-radius: 0.5rem;
-  border: 1px solid var(--border);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  height: auto;
-  text-align: center;
-  padding: 1rem;
-}
-
-.card-right>p {
-  font-size: 1rem;
-  margin: 0;
-}
 
 /* SKILLS */
 #skills {
@@ -247,9 +146,9 @@ span {
   flex-wrap: wrap;
 }
 
-.skills-container #card {
+#card {
   position: relative;
-  width: 200px;
+  width: 100%;
   height: 120px;
   padding: 2rem;
   border-radius: 0.3rem;
@@ -278,12 +177,6 @@ p {
   line-height: 160%;
 }
 
-@media (max-width: 579px) {
-  #card {
-    width: 80vw;
-  }
-}
-
 #card:hover {
   transform: translateY(-10px);
   transition-delay: 0s;
@@ -296,4 +189,17 @@ p {
 
 #card:not(:hover) {
   transition-delay: 0.2s;
+}
+
+
+@media (max-width: 992px) {
+  #skills {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #card {
+    width: 80vw;
+  }
 }

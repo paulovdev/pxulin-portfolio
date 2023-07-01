@@ -5,11 +5,13 @@ import Router from './Router';
 
 const App = () => {
   return (
-    <div className="grid-layout">
-      <div className="principal">
-        <Router />
+    <>
+      <div className="grid-layout">
+        <div className="principal">
+          <Router />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

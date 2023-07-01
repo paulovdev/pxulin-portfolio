@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { motion } from 'framer-motion';
-
+import './Setup.css'
 const Setup = () => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [value, setValue] = useState("");
@@ -26,30 +26,37 @@ const Setup = () => {
         setSelectedItem(item);
     };
 
+    const translateAnimation = {
+        initial: { opacity: 0.1, y: -50 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 50 },
+    }
+
+    const rightAnimation = {
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: -100 },
+    }
+    const leftAnimation = {
+        initial: { opacity: 0, x: 100 },
+        animate: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 100 },
+    }
+
     return (
         <main id='setup'>
-            <motion.h1
-                initial={{ opacity: 0, x: -200 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -200 }}
+            <motion.h1 {...translateAnimation}
             >
                 Meu Setup<span id="mySpan">.</span>
             </motion.h1>
 
-            <motion.p
-                initial={{ opacity: 0, x: -150 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -150 }}
+            <motion.p {...translateAnimation}
                 transition={{ delay: 0.1 }}
             >Configurações do meu computador e periféricos.
             </motion.p>
             <div className='styled-setup'>
 
-                <motion.div
-                    className="card-left"
-                    initial={{ x: -200, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -200, opacity: 0 }}
+                <motion.div {...translateAnimation} className="card-left"
                 >
                     <div className='item-list'>
 
@@ -67,10 +74,7 @@ const Setup = () => {
                         ) : (
                             filtered.map((item) => (
                                 <motion.li
-                                    key={item.title}
-                                    initial={{ x: -20, opacity: 0 }}
-                                    animate={{ x: 0, opacity: 1 }}
-                                    exit={{ x: -20, opacity: 0 }}
+                                    key={item.title} {...rightAnimation}
                                 >
                                     <div id='item' onClick={() => handleItemClick(item)}>
                                         <span>{item.title}</span>
@@ -83,10 +87,8 @@ const Setup = () => {
                     </div>
                 </motion.div>
 
-                <motion.div
-                    initial={{ x: 200, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -200, opacity: 0 }}
+                <motion.div {...leftAnimation}
+
                     className="card-right">
 
                     <p>{selectedItem ? selectedItem.spec : "Selecione um item ao lado"}</p>

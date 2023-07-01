@@ -55,19 +55,21 @@ const Skills = () => {
             desc: "asd",
         },
     ];
+
+    const translateAnimation = {
+        initial: { opacity: 0.1, y: -50 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 50 },
+    };
     return (
         <main id='skills'>
             <motion.h1
-                initial={{ opacity: 0, y: -450 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -50 }}
+                {...translateAnimation}
             >
                 Minhas Habilidades<span id="mySpan">.</span>
             </motion.h1>
             <motion.p
-                initial={{ opacity: 0, y: -250 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
+                transition={{ delay: 0.1 }}
             >
                 Clique em algum card e veja as tecnologias que uso.
             </motion.p>

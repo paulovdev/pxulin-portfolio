@@ -1,19 +1,29 @@
 import React from "react";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
+    const translateAnimation = {
+        initial: { opacity: 0.1, y: -50 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 50 },
+    };
     return (
         <main id="contact">
-            <h1>About me<span id="mySpan">.</span></h1>
-            <p>Send me a message!</p>
+            <motion.h1 {...translateAnimation}>About me<span id="mySpan">.</span>
+            </motion.h1>
+            <motion.p {...translateAnimation}
+                transition={{ delay: 0.1 }}>Send me a message!</motion.p>
             <form>
                 <div className="col-1">
-                    <input
+                    <motion.input   {...translateAnimation}
+                        transition={{ delay: 0.1 }}
                         type="text"
                         placeholder="Enter your name"
                         required
                     />
 
-                    <input
+                    <motion.input  {...translateAnimation}
+                        transition={{ delay: 0.2 }}
                         type="email"
                         placeholder="Enter your email"
                         required
@@ -21,13 +31,15 @@ const Contact = () => {
                 </div>
 
                 <div className="col-2">
-                    <input
+                    <motion.input {...translateAnimation}
+                        transition={{ delay: 0.3 }}
                         type="text"
                         placeholder="Subject"
                         required
                     />
 
-                    <textarea
+                    <motion.textarea {...translateAnimation}
+                        transition={{ delay: 0.4 }}
                         placeholder="Message"
                         rows={5}
                         required
@@ -36,7 +48,7 @@ const Contact = () => {
 
                 <button type="submit">Send</button>
             </form>
-        </main>
+        </main >
     );
 };
 

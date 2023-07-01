@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
-import Setup from './pages/Setup';
+import Setup from './pages/Setup/Setup';
 
 function RoutesApp() {
     return (
