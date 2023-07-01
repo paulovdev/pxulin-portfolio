@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { motion } from 'framer-motion';
+
 const Setup = () => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [value, setValue] = useState("");
@@ -23,46 +25,77 @@ const Setup = () => {
     const handleItemClick = (item) => {
         setSelectedItem(item);
     };
+
     return (
-        <div className="grid-layout">
-            <div className="principal">
-                <main id='setup'>
-                    <h1>Minha Configuração</h1>
-                    <p>Configurações do meu computador e periféricos.</p>
-                    <div className='styled-setup'>
+        <main id='setup'>
+            <motion.h1
+                initial={{ opacity: 0, x: -200 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -200 }}
+            >
+                Meu Setup<span id="mySpan">.</span>
+            </motion.h1>
 
-                        <div className="card-left">
+            <motion.p
+                initial={{ opacity: 0, x: -150 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -150 }}
+                transition={{ delay: 0.1 }}
+            >Configurações do meu computador e periféricos.
+            </motion.p>
+            <div className='styled-setup'>
 
-                            <div className='item-list'>
+                <motion.div
+                    className="card-left"
+                    initial={{ x: -200, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -200, opacity: 0 }}
+                >
+                    <div className='item-list'>
 
-                                <input
-                                    type="text"
-                                    value={value}
-                                    onChange={(e) => setValue(e.target.value)}
-                                    placeholder="Pesquisar"
-                                />
-                                {filtered.length === 0
-                                    ? (<li >Nenhum resultado</li>)
-                                    : (filtered.map((item) => (<li key={item.title}>
-                                        <div id='item' onClick={() => handleItemClick(item)}>
-                                            <span>{item.title}</span>
-                                            <AiOutlineArrowRight />
-                                        </div>
-                                    </li>
-                                    ))
-                                    )}
-                            </div>
-                        </div>
+                        <input
+                            type="text"
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                            placeholder="Pesquisar"
+                        />
 
-                        <div className="card-right">
-                            <p>{selectedItem ? selectedItem.spec : "Selecione um item ao lado"}</p>
-                        </div>
+                        {filtered.length === 0 ? (
+                            <motion.li key="no-result" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                                Nenhum resultado
+                            </motion.li>
+                        ) : (
+                            filtered.map((item) => (
+                                <motion.li
+                                    key={item.title}
+                                    initial={{ x: -20, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    exit={{ x: -20, opacity: 0 }}
+                                >
+                                    <div id='item' onClick={() => handleItemClick(item)}>
+                                        <span>{item.title}</span>
+                                        <AiOutlineArrowRight />
+                                    </div>
+                                </motion.li>
+                            ))
+                        )}
 
                     </div>
-                </main>
-            </div>
-        </div>
-    )
-}
+                </motion.div>
 
-export default Setup
+                <motion.div
+                    initial={{ x: 200, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -200, opacity: 0 }}
+                    className="card-right">
+
+                    <p>{selectedItem ? selectedItem.spec : "Selecione um item ao lado"}</p>
+
+                </motion.div>
+
+            </div>
+        </main >
+    );
+};
+
+export default Setup;

@@ -2,45 +2,41 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <div className="grid-layout">
-            <div className="principal">
-                <main id="contact">
-                    <h1>Contato<span id="mySpan">.</span></h1>
-                    <p>Envie-me uma mensagem!</p>
-                    <form>
-                        <div className="col-1">
-                            <input
-                                type="text"
-                                placeholder="Digite seu nome"
-                                required
-                            />
+        <main id="contact">
+            <h1>About me<span id="mySpan">.</span></h1>
+            <p>Send me a message!</p>
+            <form>
+                <div className="col-1">
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    />
 
-                            <input
-                                type="email"
-                                placeholder="Digite seu e-mail"
-                                required
-                            />
-                        </div>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+                </div>
 
-                        <div className="col-2">
-                            <input
-                                type="text"
-                                placeholder="Assunto"
-                                required
-                            />
+                <div className="col-2">
+                    <input
+                        type="text"
+                        placeholder="Subject"
+                        required
+                    />
 
-                            <textarea
-                                placeholder="Mensagem"
-                                rows={5}
-                                required
-                            />
-                        </div>
+                    <textarea
+                        placeholder="Message"
+                        rows={5}
+                        required
+                    />
+                </div>
 
-                        <button type="submit">Enviar</button>
-                    </form>
-                </main>
-            </div>
-        </div>
+                <button type="submit">Send</button>
+            </form>
+        </main>
     );
 };
 

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #121212;
+
+    --bg: #161616;
+
+    --border: #373737;
+
+    --text-color: #ffffff;
+    --text-color-2: #8a8a8a;
+
+    --border-special: #ffffffe6;
+
+    --color-special: #0078F2;
+}
+
+.light {
+    --background: #f8fafc;
+    --bg: #ffffff00;
+
+    --border: #b5b5b5;
+
+    --text-color: #333;
+    --text-color-2: #5a5a5a;
+
+    --border-special: #000000e8;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: 1rem 'Inter', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--background);
+    color: var(--text-color);
+
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+::selection {
+    background-color: var(--color-special);
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.react-tooltip {
+    background-color: var(--background);
+    color: var(--text-color);
+    border: 1px solid var(--border);
+    z-index: 999;
+
+}
+
+.grid-layout {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 200px 0;
+    overflow: hidden;
+
+    @media screen and (max-width: 992px) {
+        padding: 100px 20px;
+    }
+}
+
+#mySpan {
+    font-size: 50px;
+    color: var(--color-special);
+    transform: scale(2);
+}
