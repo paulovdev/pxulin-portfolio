@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
-
+import './Contact.css'
 const Contact = () => {
     const translateAnimation = {
         initial: { opacity: 0.1, y: -50 },

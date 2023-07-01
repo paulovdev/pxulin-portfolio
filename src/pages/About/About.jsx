@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import './About.css'
 const About = () => {
     const translateAnimation = {
         initial: { opacity: 0.1, y: -50 },
@@ -20,8 +20,7 @@ const About = () => {
             <motion.div {...translateAnimation}
                 className="text-container"
             >
-                <h1>
-                    Sobre mim<span id="mySpan">.</span>
+                <h1>Sobre mim<span id="mySpan">.</span>
                 </h1>
                 <p >
                     Olá, meu nome é Paulo Vitor e tenho 19 anos.

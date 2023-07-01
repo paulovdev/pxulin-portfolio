@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react'
 import Header from './components/Header';
 import Home from './pages/Home/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Skills from './pages/Skills';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Skills from './pages/Skills/Skills';
 import Setup from './pages/Setup/Setup';
 
 function RoutesApp() {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import './Skills.css'
 /* ICONS */
 import { SiStyledcomponents, SiReact } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
