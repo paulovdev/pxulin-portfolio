@@ -55,7 +55,7 @@ const Header = () => {
                                 to={item.href}
                                 style={{
                                     transition: 'border 0.2s ease',
-                                    borderBottom: location.pathname === item.href ? '3px solid var(--color-special)' : '',
+                                    borderBottom: location.pathname === item.href ? '2px solid var(--color-special)' : '',
                                 }}
                             >
                                 {item.nav}

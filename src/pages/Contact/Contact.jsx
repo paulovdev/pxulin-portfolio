@@ -9,7 +9,7 @@ const Contact = () => {
     };
     return (
         <main id="contact">
-            <motion.h1 {...translateAnimation}>About me<span id="mySpan">.</span>
+            <motion.h1 {...translateAnimation}>About me<span id="mySpan"></span>
             </motion.h1>
             <motion.p {...translateAnimation}
                 transition={{ delay: 0.1 }}>Send me a message!</motion.p>

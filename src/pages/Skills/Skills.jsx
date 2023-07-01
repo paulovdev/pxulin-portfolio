@@ -67,7 +67,7 @@ const Skills = () => {
             <motion.h1
                 {...translateAnimation}
             >
-                Minhas Skills<span id="mySpan">.</span>
+                Minhas Skills<span id="mySpan"></span>
             </motion.h1>
             <motion.p
                 transition={{ delay: 0.1 }}

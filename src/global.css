@@ -7,16 +7,16 @@ html {
 :root {
     --background: #121212;
 
-    --bg: #161616;
+    --bg: #16161600;
 
     --border: #373737;
 
-    --text-color: #ffffff;
+    --text-color: #fff;
     --text-color-2: #8a8a8a;
 
-    --border-special: #ffffffe6;
+    --blur: blur(70px);
 
-    --color-special: #0078F2;
+    --color-special: #34b8ff;
 }
 
 .light {
@@ -28,7 +28,7 @@ html {
     --text-color: #333;
     --text-color-2: #5a5a5a;
 
-    --border-special: #000000e8;
+    --blur: blur(70px);
 }
 
 
@@ -104,9 +104,11 @@ body {
 }
 
 #mySpan {
-    font-size: 50px;
-    color: var(--color-special);
-    transform: scale(2);
+    display: inline-block;
+    background-color: var(--color-special);
+    margin-left: 0.5rem;
+    width: 6px;
+    height: 6px;
 }
 
 /* CUSTOM-CURSOR */

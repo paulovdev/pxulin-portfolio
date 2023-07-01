@@ -18,13 +18,10 @@ const About = () => {
         <main id="about">
 
             <motion.div {...translateAnimation}
-                className="text-container"
-            >
-                <h1>Sobre mim<span id="mySpan">.</span>
-                </h1>
-                <p >
-                    Olá, meu nome é Paulo Vitor e tenho 19 anos.
-                </p >
+                className="text-container">
+                <h1>Sobre mim<span id="mySpan"></span> </h1>
+
+                <p > Olá, meu nome é Paulo Vitor e tenho 19 anos. </p >
 
                 <p >
                     Sou apaixonado por tecnologia desde os 10 anos de idade. Recentemente, descobri a programação e tenho me dedicado intensamente para me tornar um ótimo desenvolvedor. Meu foco é construir aplicações web avançadas com ênfase em desempenho utilizando ferramentas como o Visual Studio Code.
@@ -35,12 +32,16 @@ const About = () => {
                 </p>
             </motion.div>
 
-            <div className="image-container">
-                <motion.img {...imageAnimation}
-                    src="/perfil_photo.jpg"
-                    alt="Profile"
-                />
+            <div class="image-container">
+                <div>
+                    <motion.img
+                        src="/perfil_photo.jpg"
+                        alt="Profile"
+                        {...imageAnimation}
+                    />
+                </div>
             </div>
+
         </main>
     );
 };

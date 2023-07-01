@@ -47,7 +47,7 @@ const Setup = () => {
         <main id='setup'>
             <motion.h1 {...translateAnimation}
             >
-                Meu Setup<span id="mySpan">.</span>
+                Meu Setup<span id="mySpan"></span>
             </motion.h1>
 
             <motion.p {...translateAnimation}

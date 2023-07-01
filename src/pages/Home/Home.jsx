@@ -18,7 +18,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
             >
-                Desenvolvedor Front-end<span id="mySpan">.</span>
+                Desenvolvedor Front-end<span id="mySpan"></span>
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: -250 }}
