@@ -59,6 +59,10 @@
 }
 
 @media (max-width: 768px) {
+  #skills {
+    text-align: center;
+  }
+
   #card {
     width: 80vw;
   }

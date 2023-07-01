@@ -109,6 +109,15 @@ body {
     transform: scale(2);
 }
 
-.sc-eqUAAy {
-    z-index: 9999;
+/* CUSTOM-CURSOR */
+@media screen and (max-width: 9999px) {
+
+    div[class*='kursor'].kursor--1,
+    div[class*='kursor'].kursor--1+.kursorChild,
+    div[class*='kursor'] {
+        display: flex !important;
+        z-index: 99999;
+        border: 2px solid var(--text-color);
+        display: block;
+    }
 }

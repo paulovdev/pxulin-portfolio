@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "custom-pointer-react": "^0.0.4",
     "framer-motion": "^10.12.18",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
